@@ -1,0 +1,67 @@
+nav{
+    /*met en ligne*/
+    display: flex;
+
+    /*justify content va avec un display flex*/
+    justify-content: space-evenly;
+}
+
+nav li{
+    list-style-type: none;
+    margin: 10px;
+    
+}
+
+nav li a{
+    /*enleve souligne*/
+    text-decoration: none; 
+}
+
+div.burger{ 
+    width: 50px;
+    height: 50px;
+    background-image: url(images/3traits.png);
+    background-size: cover;
+    /*cacher image sur version web*/
+    display: none; 
+}
+
+div.open{
+    background-image: url(images/croix.png);
+}
+
+
+
+
+
+/*code css pour version mobile*/
+@media screen and (max-width: 480px) {
+
+    nav {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    nav li {
+    /*cacher les li acceuil etc*/
+    display: none;
+    }
+
+    nav.nav-open{
+        /*reafficher le menu*/
+        display: block;
+    }
+
+    body {
+        background-color: pink;
+    }
+
+    div.burger{ 
+    /*rendre visible le truc qu'on a cacher*/
+    display: block;
+    }
+
+} 
+
+
+    

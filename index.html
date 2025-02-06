@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <nav id = "nav">
+        <div id="burger" class="burger"></div>
+
+        <li><a href="">Accueil</a></li>
+        <li><a href="">A propos</a></li>
+        <li><a href="">Galerie</a></li>
+        <li><a href="">Contact</a></li>
+        
+    </nav>
+
+    <script>
+        const burger = document.getElementById('burger');
+        //rendre clickable le burger
+        const nav = document.getElementById('nav');
+
+
+        burger.addEventListener('click', () => {
+            //rajt la classe open si elle n'existe pas, sinon la supprime
+            burger.classList.toggle('open');
+            //afficher le menu
+            nav.classList.toggle('nav-open');
+        });
+
+    </script>
+</body>
+</html>
